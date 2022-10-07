@@ -1,0 +1,57 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 767.98px;
+    margin: 0 auto 100px;
+    height: 100%;
+}
+
+.navbar-Withdraw h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    /* identical to box height, or 286% */
+
+
+    color: #282828;
+}
+
+.saldo span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+
+
+    color: #757575;
+}
+
+.saldo p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+
+
+    color: #C2C2C2;
+}
+
+.transfer h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+
+    color: #282828;
+
+}
+.nominal-withdraw h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+
+    color: #282828;
+
+}

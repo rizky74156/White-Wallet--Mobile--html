@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 767.98px;
+    margin: 0 auto 100px;
+}
+
+.navbar-TopUp h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 40px;
+    /* identical to box height, or 286% */
+
+
+    color: #282828;
+}
+
+.saldo-anda {
+    margin-top: 25px;
+}
+
+.saldo-anda p {
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #828282;
+}
+
+.saldo-anda h2 {
+    font-weight: 400;
+    font-size: 36px;
+
+
+    color: #2C5285;
+}
+
+.pilih-nominal {
+    margin-top: 20px;
+}
+
+.pilih-nominal h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 40px;
+
+    color: #282828;
+
+}
+
+.button-nominal {
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 50px;
+    padding: 5px 18px;
+
+    font-weight: 400;
+    font-size: 11px;
+}
+.button-nominal:focus {
+    border: 1px solid #427BC8;
+    color: #427BC8;
+}
+
+.nominal-lainnya h2 {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    /* identical to box height, or 400% */
+
+
+    color: #828282;
+}
+
+.nominal-lainnya .form-control {
+    font-weight: 400;
+    font-size: 15px;
+
+
+    color: #282828;
+    background: #E5E5E5;
+}
+
+.kartu-debit h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    /* identical to box height, or 286% */
+
+
+    color: #282828;
+}   
+
+.bank p {
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 11px;
+
+
+    color: #282828;
+}
+
+.bank span {
+    font-weight: 600;
+    font-size: 12px;
+    /* identical to box height, or 333% */
+
+
+    color: #282828;
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="withdraw.css">
+
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        select#pilihan option[value="BNI"]   { background-image:url(../../asset/bca-logo.png);   }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container mt-2">
+            <div class="navbar-Withdraw">
+                <div class="back">
+                    <a href="../../index.html">
+                        <img src="../../asset/Icon-back.png" alt="">
+                    </a>
+                </div>
+                <div class="text-center">
+                    <h1>Withdraw</h1>
+                </div>
+            </div>
+        </div>
+        <img src="../../asset/underline-full.png" class="w-100" alt="">
+    </nav>
+
+    <!-- Dropdown -->
+    <div class="container">
+
+        <form id="formControl">
+            <div class="transfer">
+                <h1>Pilih Tujuan</h1>
+                <div class="dropdown mt-2">
+                    <select class="form-select" id="pilihan" aria-label="Default select example">
+                        <option selected>Bank</option>
+                        <option value="BNI">BNI</option>
+                        <option value="Mandiri">Mandiri</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class="input-group my-2">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1" id="username">
+                    </div>
+                    <div class="input-group my-2">
+                        <input type="number" class="form-control" placeholder="No Rekening" aria-label="NoRekening"
+                            aria-describedby="basic-addon1" id="norek">
+                    </div>
+                </div>
+                <img src="../../asset/underline-full.png" class="w-100" alt="">
+            </div>
+
+
+            <div class="nominal-withdraw">
+                
+                <div class="d-flex align-items-start">
+                    <img src="../../asset/logo SPE.svg" alt="">
+                    <div class="ps-2 saldo">
+                        <span class="d-block">SPE Wallet</span>
+                        <p>Saldo <span class="fw-bold">Rp500.000</span></p>
+                    </div>
+                </div>
+
+                <h1>Masukan Nominal</h1>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Rp</span>
+                    <input type="text" class="form-control" id="nominal" placeholder="0">
+                </div>
+
+                <div class="input-group">
+                    <textarea class="form-control" aria-label="With textarea" placeholder="pesan (opsional)" id="pesan"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container h-100">
+            <div class="text-center fixed-bottom ">
+                <div class="px-4 py-2 border border-end-0 border-start-0 border-bottom-0 bg-white">
+                    <a href="../piN/pin.html"  class="btn btn-primary w-100 disabled" type="button" id="button">Lanjutkan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script>
+        formControl.addEventListener('input', () => {
+            if (nominal.value.length > 0 &&
+            username.value.length > 0 && norek.value.length > 0) {
+                button.classList.remove('disabled');
+            } else {
+                button.classList.add('disabled', 'disabled');
+            }
+        });
+
+        var rupiah = document.getElementById('nominal');
+    rupiah.addEventListener('keyup', function(e)
+    {
+        rupiah.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? rupiah : '');
+    }
+    </script>
+
+
+</body>
+
+</html>

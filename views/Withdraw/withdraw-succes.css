@@ -1,0 +1,25 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height, or 111% */
+
+
+    color: #282828;
+    text-transform: uppercase;
+}
+#hero p{
+    font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 40px;
+/* identical to box height, or 286% */
+
+
+color: #282828;
+}

@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E4F0FF;
+    margin: 0 auto 100px;
+}
+
+/* Header */
+#header {
+    padding-top: 49px;
+    z-index: 1;
+}
+
+.menu-header {
+    z-index: 4;
+}
+
+.balance h1 {
+    font-weight: 600;
+    font-size: 14px;
+
+
+    color: #282828;
+}
+
+.bg-menu a{
+    text-decoration: none;
+}
+.bg-menu p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 23px;
+    /* identical to box height, or 230% */
+    
+    letter-spacing: 0.3px;
+    
+    color: #282828;
+}
+
+.menu-header a {
+    text-decoration: none;
+}
+
+.balance p {
+    padding-top: 0px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 40px;
+    /* or 333% */
+
+
+    color: #616161;
+}
+
+.balance span {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 40px;
+    /* or 333% */
+
+
+    color: #FF8700;
+}
+
+.menu-header p {
+    margin-top: 7px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+
+
+    text-align: center;
+    letter-spacing: 0.3px;
+
+    color: #282828;
+    
+}
+
+/* Menu */
+#menu {
+    z-index: 2;
+    position: relative;
+    margin-top: -10;
+}
+
+.bg-menu {
+    background-color: #FFFFFF;
+    border-radius: 19px 19px 0 0;
+    width: 100%;
+}
+
+nav p{
+    margin-bottom: 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+
+    letter-spacing: 0.3px;
+    
+    color: #9E9E9E;
+}
+
+.active{
+    filter: brightness(0) saturate(100%) invert(20%) sepia(13%) saturate(3040%) hue-rotate(176deg) brightness(92%) contrast(88%);
+}
+
+.bg-navbar-bottom{
+    background-image: url(../asset/kotak\ bottom\ bar.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+}

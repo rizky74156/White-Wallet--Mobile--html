@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="TopUp.css">
+
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="container mt-2">
+            <div class="navbar-TopUp">
+                <div class="back">
+                    <a href="../../index.html">
+                        <img src="../../asset/Icon-back.png" alt="">
+                    </a>
+                </div>
+                <div class="text-center">
+                    <h1>TopUp</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container mt-3">
+            <div class="saldo-anda text-center">
+                <p>Saldo Anda</p>
+                <h2>Rp500.000</h2>
+            </div>
+            <div class="nominal">
+                <div class="pilih-nominal">
+                    <h1>Pilih Nominal TopUp</h1>
+                    <div class="nominal d-flex justify-content-center">
+                        <button id="buttonClick" type="button" class="button-nominal mx-1"
+                            onclick="nominal1()">Rp100.000</button>
+                        <button id="buttonClick" type="button" class="button-nominal mx-1"
+                            onclick="nominal2()">Rp200.000</button>
+                        <button id="buttonClick" type="button" class="button-nominal mx-1"
+                            onclick="nominal3()">Rp500.000</button>
+                    </div>
+                </div>
+                <div class="nominal-lainnya">
+                    <h2>Nominal Lainnya</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="nominal" placeholder="Minimal Rp10.000">
+                    </div>
+                </div>
+            </div>
+            <div class="kartu-debit">
+                <h1>
+                    Kartu Debit
+                </h1>
+                <div class="bank">
+                    <img src="../../asset/bca-logo.png" alt="">
+                    <div class="rekening d-flex mx">
+                        <p>
+                            Nomor Kartu
+                        </p>
+                        <span>1234 - 5678 - 9876 - XXXX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container h-100">
+            <div class="text-center fixed-bottom ">
+                <div class="px-4 py-2 border border-end-0 border-start-0 border-bottom-0 bg-white">
+                    <a href="TopUpSucces.html" class="btn btn-primary w-100 disabled" id="button" type="button">
+                        Top Up Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script src="../../script/nominal.js"></script>
+    <script>
+        function nominal1() {
+            document.getElementById("nominal").value = "Rp. 100.000";
+        }
+
+        function nominal2() {
+            document.getElementById("nominal").value = "Rp. 200.000";
+        }
+
+        function nominal3() {
+            document.getElementById("nominal").value = "Rp. 500.000";
+        }
+
+        nominal.addEventListener('input', () => {
+            if (nominal.value.length >= 10) {
+                button.classList.remove('disabled');
+            } else {
+                button.classList.add('disabled', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
